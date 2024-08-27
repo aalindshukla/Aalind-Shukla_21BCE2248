@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #398d93; /* Greenish blue background */
+    color: #ffffff; /* White text */
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+#turn-display {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+#game-board {
+    margin: 20px auto;
+    width: 250px;
+    height: 250px;
+    border: 2px solid #ffffff; /* Thicker white border */
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(5, 50px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for a 3D effect */
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ffffff; /* White cell borders */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #000000; /* Black cell background */
+    color: #ffffff; /* White text in cells */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effect */
+    border-radius: 8px; /* Rounded corners for cells */
+}
+
+.cell:hover {
+    background-color: #00008b; /* Dark blue background on hover */
+    transform: scale(1.05); /* Slightly enlarge the cell on hover */
+}
+
+.occupied-a {
+    background-color: #4ec95f; /* Green background for Player A cells */
+    color: #000000; /* Black text for Player A cells */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow for a pressed effect */
+}
+
+.occupied-b {
+    background-color: #ff6347; /* Red background for Player B cells */
+    color: #000000; /* Black text for Player B cells */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow for a pressed effect */
+}
+
+.selected {
+    outline: 2px solid #ffffff; /* White outline for selected cells */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Glow effect for selected cells */
+}
